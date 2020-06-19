@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genesis</title>
+
+  <link rel="stylesheet" type="text/css" href="css/destyle.css" />
+  <link rel="stylesheet" type="text/css" href="css/common.css" />
+</head>
+
+<body>
+  <header class="gnb_wrap">
+    <nav class="gnb_container">
+      <a>
+
+      </a>
+      <div>
+
+      </div>
+
+      <div>
+
+      </div>
+    </nav>
+  </header>
+  <section class="carousel">
+    <ul class="slide_wrap">
+      <li class="slide"></li>
+      <li class="slide"></li>
+      <li class="slide"></li>
+      <li class="slide"></li>
+      <li class="slide"></li>
+    </ul>
+    <div class="indicator">
+      <ul class="bullet">
+        <li class="js_bullet">
+          <button class="js_button" onclick="buttonClick2()"></button>
+        </li>
+        <li class="js_bullet" onclick="buttonClick()">
+          <button class="js_button"></button>
+        </li>
+        <li class="js_bullet" onclick="buttonClick()">
+          <button class="js_button"></button>
+        </li>
+        <li class="js_bullet" onclick="buttonClick()">
+          <button class="js_button"></button>
+        </li>
+        <li class="js_bullet" onclick="buttonClick()">
+          <button class="js_button"></button>
+        </li>
+      </ul>
+    </div>
+    <button class="thumb_button">
+      <div class="thumb_button_container"></div>
+    </button>
+  </section>
+
+  <script>
+    var jsButton = document.getElementsByClassName('js_button');
+    var mySlide = document.getElementsByClassName('slide');
+
+    var slideIndex = 0;
+
+    function buttonClick() {
+      jsButton.style = "background-color: #fff;";
+      mySlide[1].style = "left:0; transition:left 0.5s;"
+    }
+  </script>
+</body>
+
+</html>

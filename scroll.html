@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/destyle.css" />
+  <title>Document</title>
+
+  <style>
+    section {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+    }
+
+    ul {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 0 5%;
+
+    }
+
+    li {
+      width: 26%;
+      height: auto;
+      position: absolute;
+      opacity: 0;
+      transition: all 2s;
+    }
+
+    li:nth-child(1) {
+      top: 50px;
+      left: 5%;
+      transition-delay: 0s;
+    }
+
+    li:nth-child(2) {
+      top: 50px;
+      left: 33%;
+      transition-delay: 0.2s;
+    }
+
+    li:nth-child(3) {
+      top: 50px;
+      left: 61%;
+      transition-delay: 0.4s;
+    }
+
+    li img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body onscroll="scrollFadeIn()">
+  <section>page 1</section>
+  <section>page 2
+    <ul id="card_ul">
+      <li id="card1">
+        <img src="img/Genesis_KR_Home_Content_01_C15_630x358.jpg">
+        <h3>GENESIS OWNERS</h3>
+        <p>제네시스 오너분들께만 주어지는 특별한 혜택과 이상적인 경험을 선사합니다.</p>
+        <p>자세히 보기</p>
+      </li>
+      <li id="card2">
+        <img src="img/Genesis_KR_Home_Content_02_C15_630x358.jpg">
+        <h3>SHOPPING TOOLS</h3>
+        <p>제네시스 차량의 견적, 구매상담 신청, 시승 신청 뿐 아니라 제네시스 강남 방문 예약 등 당신만의 제네시스를 찾는 여정을 지원합니다.</p>
+        <p>자세히 보기</p>
+      </li>
+      <li id="card3">
+        <img src="img/Genesis_KR_Autoshows_Content_02_C15_630x358.jpg">
+        <h3>GENESIS MODELS</h3>
+        <p>역동적이면서도 우아한 디자인과 최첨단 기술을 탑재한 제네시스 브랜드의 라인업을 살펴보세요.</p>
+        <p>자세히 보기</p>
+      </li>
+    </ul>
+  </section>
+  <section>page 3</section>
+
+  <script>
+    function scrollFadeIn() {
+      console.log(bodyScrollTop);
+      console.log(cardOffsetTop);
+    }
+
+    var bodyScrollTop = document.documentElement.scrollTop;
+    var cardOffsetTop = document.getElementById("card_ul").offsetTop;
+
+    if (bodyScrollTop >= cardOffsetTop) {
+      document.getElementById("card1").style = "opacity:1; top:0px;"
+      document.getElementById("card2").style = "opacity:1; top:0px;"
+      document.getElementById("card3").style = "opacity:1; top:0px;"
+    }
+  </script>
+
+</body>
+
+</html>
